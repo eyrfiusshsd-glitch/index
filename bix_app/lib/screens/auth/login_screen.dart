@@ -5,7 +5,7 @@ import '../../constants/app_colors.dart';
 import '../../widgets/custom_button.dart';
 import '../../widgets/custom_text_field.dart';
 import 'signup_screen.dart';
-import '../main/main_screen.dart';
+import '../main/enhanced_main_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -202,7 +202,7 @@ class _LoginScreenState extends State<LoginScreen> {
       });
       
       // Navigate to main screen
-      Get.offAll(() => const MainScreen());
+      Get.offAll(() => const EnhancedMainScreen());
     });
   }
 

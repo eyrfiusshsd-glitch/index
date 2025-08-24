@@ -6,8 +6,9 @@ class UserModel {
   final bool isVerified;
   final int followers;
   final int following;
-  final int likes;
-  final String? bio;
+  final int likesCount;
+  final int videosCount;
+  final String bio;
   final bool isOnline;
   final String lastSeen;
   final List<String>? videos;
@@ -20,8 +21,9 @@ class UserModel {
     required this.isVerified,
     required this.followers,
     this.following = 0,
-    this.likes = 0,
-    this.bio,
+    this.likesCount = 0,
+    this.videosCount = 0,
+    this.bio = '',
     required this.isOnline,
     required this.lastSeen,
     this.videos,
@@ -35,7 +37,8 @@ class UserModel {
     bool? isVerified,
     int? followers,
     int? following,
-    int? likes,
+    int? likesCount,
+    int? videosCount,
     String? bio,
     bool? isOnline,
     String? lastSeen,
@@ -49,7 +52,8 @@ class UserModel {
       isVerified: isVerified ?? this.isVerified,
       followers: followers ?? this.followers,
       following: following ?? this.following,
-      likes: likes ?? this.likes,
+      likesCount: likesCount ?? this.likesCount,
+      videosCount: videosCount ?? this.videosCount,
       bio: bio ?? this.bio,
       isOnline: isOnline ?? this.isOnline,
       lastSeen: lastSeen ?? this.lastSeen,
@@ -66,7 +70,8 @@ class UserModel {
       'isVerified': isVerified,
       'followers': followers,
       'following': following,
-      'likes': likes,
+      'likesCount': likesCount,
+      'videosCount': videosCount,
       'bio': bio,
       'isOnline': isOnline,
       'lastSeen': lastSeen,
@@ -83,8 +88,9 @@ class UserModel {
       isVerified: json['isVerified'],
       followers: json['followers'],
       following: json['following'] ?? 0,
-      likes: json['likes'] ?? 0,
-      bio: json['bio'],
+      likesCount: json['likesCount'] ?? 0,
+      videosCount: json['videosCount'] ?? 0,
+      bio: json['bio'] ?? '',
       isOnline: json['isOnline'],
       lastSeen: json['lastSeen'],
       videos: json['videos'] != null ? List<String>.from(json['videos']) : null,

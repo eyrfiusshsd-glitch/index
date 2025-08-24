@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../../constants/app_colors.dart';
-import 'home_screen.dart';
-import '../search/search_screen.dart';
+import 'enhanced_home_screen.dart';
+import '../search/new_search_screen.dart';
 import '../video_creation/video_creation_screen.dart';
 import '../messages/messages_screen.dart';
-import '../profile/profile_screen.dart';
+import '../profile/enhanced_profile_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -18,11 +18,11 @@ class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
   
   final List<Widget> _screens = [
-    const HomeScreen(),
-    const SearchScreen(),
+    const EnhancedHomeScreen(),
+    const NewSearchScreen(),
     const VideoCreationScreen(),
     const MessagesScreen(),
-    const ProfileScreen(),
+    const EnhancedProfileScreen(),
   ];
 
   @override
